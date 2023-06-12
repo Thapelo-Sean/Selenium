@@ -53,6 +53,7 @@ public class Exceptions {
 	@Test
 	public void handleStaleException()
 	{
+		//Open Browser
 		driver = new ChromeDriver();
 		driver.get("https://google.com");
 		WebElement element = driver.findElement(By.xpath("/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/textarea"));
