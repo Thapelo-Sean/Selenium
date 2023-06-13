@@ -1,6 +1,8 @@
 package CucumberProject;
 
 import java.util.concurrent.TimeUnit;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -17,7 +19,7 @@ public class steps {
 	public void Open_google_chrome_and_launch_the_application() 
 	{
 		System.out.println("This step opens google chrome and launches the application");
-		
+		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.get("https://facebook.com");
 		driver.manage().window().maximize();
