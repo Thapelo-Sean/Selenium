@@ -11,7 +11,6 @@ public class dataProviderExample {
 		System.out.println("Your username is: " + username);
 		System.out.println("Your gender is: " + gender);
 		System.out.println("Your laptop  is: " + laptop);
-		System.out.println("");
 	}
 	
 	@DataProvider
@@ -23,8 +22,7 @@ public class dataProviderExample {
 		data[0][0] = "Thapelo";  //[] row [] column
 		data[0][1] = "Male";
 		data[0][2] = "Lenovo";
-		
-		
+
 		//Row2
 		data[1][0] = "Paul";
 		data[1][1] = "Male";
@@ -34,8 +32,7 @@ public class dataProviderExample {
 		data[2][0] = "Mary";
 		data[2][1] = "Female";
 		data[2][2] = "Asus";
-		
-		
+
 		return data;
 	}
 }

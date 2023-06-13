@@ -1,7 +1,7 @@
 package TestNG_DataProvider;
 
 import java.util.concurrent.TimeUnit;
-
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,18 +14,22 @@ public class testDDT {
 	@Test(dataProvider = "testData")
 	public void testChrome(String username, String password) 
 	{
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Katan\\OneDrive\\Desktop\\MyAutomation\\Selenium\\chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
-		
-		driver.get("https://www.facebook.com");
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
-		driver.findElement(By.id("email")).clear();
-		driver.findElement(By.id("email")).sendKeys(username);
-		driver.findElement(By.id("pass")).sendKeys(password);
+		try
+		{
+			WebDriver driver = new ChromeDriver();
+			WebDriverManager.chromedriver().setup();
+
+			driver.get("https://www.facebook.com");
+			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
+			driver.findElement(By.id("email")).clear();
+			driver.findElement(By.id("email")).sendKeys(username);
+			driver.findElement(By.id("pass")).sendKeys(password);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
-	
-	
+
 	@DataProvider(name = "testData")
 	public Object[][] testDataFeed()
 	{
