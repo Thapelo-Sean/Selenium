@@ -3,6 +3,7 @@ package BrokenLinksAndImages;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -23,11 +24,11 @@ public class findBrokenLinks {
         spark = new ExtentSparkReporter("./Report/BrokenLinksReport.html");
         report.attachReporter(spark);
 
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Katan\\OneDrive\\Desktop\\MyAutomation\\Selenium\\chromedriver.exe");
+        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
 
         driver.get("https://demoqa.com/broken");
-        driver.manage().window().minimize();
+        driver.manage().window().maximize();
         String actualTitle = "demoqa";
 
         if(actualTitle.equalsIgnoreCase(driver.getTitle()))
@@ -89,6 +90,7 @@ public class findBrokenLinks {
         }
         catch (IOException e)
         {
+            e.printStackTrace();
 
         }
         report.flush();
