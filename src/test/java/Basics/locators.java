@@ -1,18 +1,23 @@
 package Basics;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.util.concurrent.TimeUnit;
+
 public class locators {
 
 	public static void main(String[] args) throws InterruptedException {
-		
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\Katan\\OneDrive\\Desktop\\MyAutomation\\Selenium\\chromedriver.exe");
+		try
+		{
+			WebDriverManager.chromedriver().setup();
 			WebDriver driver = new ChromeDriver();
-			
+
 			driver.get("https://www.google.com");
 			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			driver.findElement(By.cssSelector("#APjFqb")).sendKeys("Selenium");		//locate element by css selector
 			Thread.sleep(300);
 			driver.findElement(By.tagName("textarea")).submit();  		//locate element by tag name.
@@ -46,5 +51,8 @@ public class locators {
 			driver.navigate().back();
 			Thread.sleep(500);
 			driver.quit();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 	}
 }
