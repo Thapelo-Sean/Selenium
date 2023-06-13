@@ -1,5 +1,6 @@
 package Basics;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,16 +12,22 @@ public class HandleDropdown {
 
     public static void main(String [] args)
     {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Katan\\OneDrive\\Desktop\\MyAutomation\\Selenium\\chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://jsbin.com/osebed/2");
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        try
+        {
+            WebDriverManager.chromedriver().setup();
+            WebDriver driver = new ChromeDriver();
+            driver.get("https://jsbin.com/osebed/2");
+            driver.manage().window().maximize();
+            driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-        WebElement myElement = driver.findElement(By.xpath("//*[@id=\"fruits\"]"));
+            WebElement myElement = driver.findElement(By.xpath("//*[@id=\"fruits\"]"));
 
-        Select select = new Select(myElement);
-        select.selectByIndex(2);
-        driver.quit();
+            Select select = new Select(myElement);
+            select.selectByIndex(2);
+            driver.quit();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
