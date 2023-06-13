@@ -18,6 +18,7 @@ public class findingBrokenImages {
     {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
+
         driver.get("https://demoqa.com/broken");
         driver.manage().window().minimize();
 
@@ -66,7 +67,8 @@ public class findingBrokenImages {
         }
         catch (Exception e)
         {
-
+            e.printStackTrace();
+            e.getMessage();
         }
     }
 }
