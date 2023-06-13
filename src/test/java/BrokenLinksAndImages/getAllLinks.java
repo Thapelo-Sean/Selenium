@@ -1,5 +1,6 @@
 package BrokenLinksAndImages;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -7,14 +8,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.Iterator;
 import java.util.List;
 
-
 public class getAllLinks {
+    public static WebDriver driver;
 
     //Get all links
     public static void main(String[] args)
     {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Katan\\OneDrive\\Desktop\\MyAutomation\\Selenium\\chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
         driver.get("https://demoqa.com/links");
 
         String url = "";

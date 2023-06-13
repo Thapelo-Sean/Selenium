@@ -27,43 +27,48 @@ public class findBrokenLinks {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
 
-        driver.get("https://demoqa.com/broken");
-        driver.manage().window().maximize();
-        String actualTitle = "demoqa";
+        try{
+            driver.get("https://demoqa.com/broken");
+            driver.manage().window().maximize();
+            String actualTitle = "demoqa";
 
-        if(actualTitle.equalsIgnoreCase(driver.getTitle()))
-        {
-            report.createTest("Navigation to specified Url")
-                    .log(Status.PASS, "Navigated to the specified url")
+            if(actualTitle.equalsIgnoreCase(driver.getTitle()))
+            {
+                report.createTest("Navigation to specified Url")
+                        .log(Status.PASS, "Navigated to the specified url")
+                        .assignAuthor("Thapelo Matji");
+            }
+            else
+            {
+                System.out.println("Titles don't match");
+                report.createTest("Navigation to specified url")
+                        .log(Status.FAIL, "Titles don't match");
+                driver.close();
+            }
+
+            List <WebElement> links = driver.findElements(By.tagName("a"));
+            int linksSize = links.size();
+            System.out.println("Number of links present are " + linksSize);
+            String url;
+            report.createTest("Getting all links")
+                    .log(Status.PASS, "Got all links in the url")
                     .assignAuthor("Thapelo Matji");
-        }
-        else
-        {
-            System.out.println("Titles don't match");
-            report.createTest("Navigation to specified url")
-                            .log(Status.FAIL, "Titles don't match");
-            driver.close();
-        }
 
-        List <WebElement> links = driver.findElements(By.tagName("a"));
-        int linksSize = links.size();
-        System.out.println("Number of links present are " + linksSize);
-        String url;
-        report.createTest("Getting all links")
-                .log(Status.PASS, "Got all links in the url")
-                .assignAuthor("Thapelo Matji");
+            int i;
+            for(i = 0; i < linksSize; i++)
+            {
+                WebElement element = links.get(i);
+                url = element.getAttribute("href");
+                verifyLinks(url);
+                System.out.println(i);
 
-        int i;
-        for(i = 0; i < linksSize; i++)
-        {
-            WebElement element = links.get(i);
-            url = element.getAttribute("href");
-            verifyLinks(url);
-            System.out.println(i);
-
-            report.createTest("Iteration of links")
-                    .log(Status.PASS, "Iterated through all links present")
-                    .assignAuthor("Thapelo Matji");
+                report.createTest("Iteration of links")
+                        .log(Status.PASS, "Iterated through all links present")
+                        .assignAuthor("Thapelo Matji");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            e.getMessage();
         }
     }
 
@@ -91,7 +96,7 @@ public class findBrokenLinks {
         catch (IOException e)
         {
             e.printStackTrace();
-
+            e.getMessage();
         }
         report.flush();
     }
