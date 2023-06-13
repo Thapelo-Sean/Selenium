@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class findBrokenLinks {
     public static WebDriver driver;
@@ -30,6 +31,7 @@ public class findBrokenLinks {
         try{
             driver.get("https://demoqa.com/broken");
             driver.manage().window().maximize();
+            driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
             String actualTitle = "demoqa";
 
             if(actualTitle.equalsIgnoreCase(driver.getTitle()))

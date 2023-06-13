@@ -9,6 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class findingBrokenImages {
 
@@ -20,7 +21,8 @@ public class findingBrokenImages {
         driver = new ChromeDriver();
 
         driver.get("https://demoqa.com/broken");
-        driver.manage().window().minimize();
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
         List<WebElement> images = driver.findElements(By.tagName("img"));
         int imagesSize = images.size();
