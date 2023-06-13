@@ -1946,7 +1946,7 @@
     <parameters xmi:id="_AglI1OWpEe2Yxcn9m6ayWA" elementId="title" name="Title"/>
     <parameters xmi:id="_AglI1eWpEe2Yxcn9m6ayWA" elementId="message" name="Message"/>
     <parameters xmi:id="_AglI1uWpEe2Yxcn9m6ayWA" elementId="imageType" name="Image Type Constant" typeId="org.eclipse.ui.dialogs.Integer"/>
-    <parameters xmi:id="_AglI1-WpEe2Yxcn9m6ayWA" elementId="defaultIndex" name="Default Button Index" typeId="org.eclipse.ui.dialogs.Integer"/>
+    <parameters xmi:id="_AglI1-WpEe2Yxcn9m6ayWA" elementId="defaultIndex" name="Basics Button Index" typeId="org.eclipse.ui.dialogs.Integer"/>
     <parameters xmi:id="_AglI2OWpEe2Yxcn9m6ayWA" elementId="buttonLabel0" name="First Button Label"/>
     <parameters xmi:id="_AglI2eWpEe2Yxcn9m6ayWA" elementId="buttonLabel1" name="Second Button Label"/>
     <parameters xmi:id="_AglI2uWpEe2Yxcn9m6ayWA" elementId="buttonLabel2" name="Third Button Label"/>
@@ -2009,7 +2009,7 @@
   <commands xmi:id="_Aglv7uWpEe2Yxcn9m6ayWA" elementId="org.eclipse.buildship.ui.commands.refreshtaskview" commandName="Refresh View (Gradle Tasks)" description="Refreshes the Gradle Tasks view" category="_AgVREeWpEe2Yxcn9m6ayWA"/>
   <commands xmi:id="_Aglv7-WpEe2Yxcn9m6ayWA" elementId="org.eclipse.wst.sse.ui.toggle.comment" commandName="Toggle Comment" description="Toggle Comment" category="_AgVRE-WpEe2Yxcn9m6ayWA"/>
   <commands xmi:id="_Aglv8OWpEe2Yxcn9m6ayWA" elementId="org.eclipse.team.ui.applyPatch" commandName="Apply Patch..." description="Apply a patch to one or more workspace projects." category="_AgVREOWpEe2Yxcn9m6ayWA"/>
-  <commands xmi:id="_Aglv8eWpEe2Yxcn9m6ayWA" elementId="org.eclipse.buildship.ui.commands.rundefaulttasks" commandName="Run Gradle Default Tasks" description="Runs the default tasks of the selected Gradle project" category="_AgV4JOWpEe2Yxcn9m6ayWA"/>
+  <commands xmi:id="_Aglv8eWpEe2Yxcn9m6ayWA" elementId="org.eclipse.buildship.ui.commands.rundefaulttasks" commandName="Run Gradle Basics Tasks" description="Runs the default tasks of the selected Gradle project" category="_AgV4JOWpEe2Yxcn9m6ayWA"/>
   <commands xmi:id="_Aglv8uWpEe2Yxcn9m6ayWA" elementId="org.eclipse.ui.help.tipsAndTricksAction" commandName="Tips and Tricks" description="Open the tips and tricks help page" category="_AgV4IOWpEe2Yxcn9m6ayWA"/>
   <commands xmi:id="_Aglv8-WpEe2Yxcn9m6ayWA" elementId="org.eclipse.ui.edit.text.select.lineEnd" commandName="Select Line End" description="Select to the end of the line of text" category="_AgVRGOWpEe2Yxcn9m6ayWA"/>
   <commands xmi:id="_Aglv9OWpEe2Yxcn9m6ayWA" elementId="org.eclipse.eclemma.ui.removeActiveSession" commandName="Remove Active Session" category="_AgVRHOWpEe2Yxcn9m6ayWA"/>
@@ -2253,8 +2253,8 @@
   <commands xmi:id="_CCyiUOWpEe2Yxcn9m6ayWA" elementId="AUTOGEN:::org.eclipse.debug.ui.breakpointsview.toolbar/org.eclipse.debug.ui.breakpointsView.toolbar.removeAll" commandName="Remove All" description="Remove All Breakpoints" category="_AgV4L-WpEe2Yxcn9m6ayWA"/>
   <commands xmi:id="_CCyiUeWpEe2Yxcn9m6ayWA" elementId="AUTOGEN:::org.eclipse.debug.ui.breakpointsview.toolbar/org.eclipse.debug.ui.breakpointsView.toolbar.linkWithDebugView" commandName="Link with Debug View" description="Link with Debug View" category="_AgV4L-WpEe2Yxcn9m6ayWA"/>
   <commands xmi:id="_CCzJYOWpEe2Yxcn9m6ayWA" elementId="AUTOGEN:::org.eclipse.debug.ui.breakpointsview.toolbar/org.eclipse.debug.ui.breakpointsView.toolbar.workingSets" commandName="Working Sets..." description="Manage Working Sets" category="_AgV4L-WpEe2Yxcn9m6ayWA"/>
-  <commands xmi:id="_CCzwcOWpEe2Yxcn9m6ayWA" elementId="AUTOGEN:::org.eclipse.debug.ui.breakpointsview.toolbar/org.eclipse.debug.ui.breakpointsView.toolbar.clearDefaultBreakpointGroup" commandName="Deselect Default Working Set" description="Deselect Default Working Set" category="_AgV4L-WpEe2Yxcn9m6ayWA"/>
-  <commands xmi:id="_CCzwceWpEe2Yxcn9m6ayWA" elementId="AUTOGEN:::org.eclipse.debug.ui.breakpointsview.toolbar/org.eclipse.debug.ui.breakpointsView.toolbar.setDefaultBreakpointGroup" commandName="Select Default Working Set..." description="Select Default Working Set" category="_AgV4L-WpEe2Yxcn9m6ayWA"/>
+  <commands xmi:id="_CCzwcOWpEe2Yxcn9m6ayWA" elementId="AUTOGEN:::org.eclipse.debug.ui.breakpointsview.toolbar/org.eclipse.debug.ui.breakpointsView.toolbar.clearDefaultBreakpointGroup" commandName="Deselect Basics Working Set" description="Deselect Basics Working Set" category="_AgV4L-WpEe2Yxcn9m6ayWA"/>
+  <commands xmi:id="_CCzwceWpEe2Yxcn9m6ayWA" elementId="AUTOGEN:::org.eclipse.debug.ui.breakpointsview.toolbar/org.eclipse.debug.ui.breakpointsView.toolbar.setDefaultBreakpointGroup" commandName="Select Basics Working Set..." description="Select Basics Working Set" category="_AgV4L-WpEe2Yxcn9m6ayWA"/>
   <commands xmi:id="_CC0XgOWpEe2Yxcn9m6ayWA" elementId="AUTOGEN:::org.eclipse.debug.ui.breakpointsview.toolbar/org.eclipse.debug.ui.breakpointsView.toolbar.sortByAction" commandName="Sort By" description="Sort By" category="_AgV4L-WpEe2Yxcn9m6ayWA"/>
   <commands xmi:id="_CC0XgeWpEe2Yxcn9m6ayWA" elementId="AUTOGEN:::org.eclipse.debug.ui.breakpointsview.toolbar/org.eclipse.debug.ui.breakpointsView.toolbar.groupByAction" commandName="Group By" description="Show" category="_AgV4L-WpEe2Yxcn9m6ayWA"/>
   <commands xmi:id="_CC0XguWpEe2Yxcn9m6ayWA" elementId="AUTOGEN:::org.eclipse.debug.ui.expressionsView.toolbar/org.eclipse.debug.ui.expresssionsView.toolbar.removeAll" commandName="Remove All" description="Remove All Expressions" category="_AgV4L-WpEe2Yxcn9m6ayWA"/>

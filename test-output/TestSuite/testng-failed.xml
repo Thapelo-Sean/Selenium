@@ -4,23 +4,23 @@
   <test thread-count="2" parallel="tests" name="FirefoxTest(failed)">
     <parameter name="browser" value="Firefox"/>
     <classes>
-      <class name="Default.crossBrowserTesting">
+      <class name="Basics.crossBrowserTesting">
         <methods>
           <include name="testParameterWithXml"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- Default.crossBrowserTesting -->
+      </class> <!-- Basics.crossBrowserTesting -->
     </classes>
   </test> <!-- FirefoxTest(failed) -->
   <test thread-count="2" parallel="tests" name="EdgeTest(failed)">
     <parameter name="browser" value="Edge"/>
     <classes>
-      <class name="Default.crossBrowserTesting">
+      <class name="Basics.crossBrowserTesting">
         <methods>
           <include name="testParameterWithXml"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- Default.crossBrowserTesting -->
+      </class> <!-- Basics.crossBrowserTesting -->
     </classes>
   </test> <!-- EdgeTest(failed) -->
 </suite> <!-- Failed suite [TestSuite] -->
