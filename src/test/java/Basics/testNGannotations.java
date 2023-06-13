@@ -68,6 +68,4 @@ public class testNGannotations {
 	{
 		System.out.println("in after Test");
 	}
-	
-
 }
