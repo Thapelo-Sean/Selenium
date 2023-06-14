@@ -22,17 +22,15 @@ public class baseClass {
 		driver.manage().window().maximize();
 		driver.findElement(By.id("APjFqb")).sendKeys("Screenshot Success");
 		//driver.findElement(By.name("btnK")).click();
-
 	}
 	
 	public void failed() 
 	{
-		File source = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		try 
 		{
+			File source = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 			FileUtils.copyFile(source, new File("C:\\Users\\Katan\\OneDrive\\Desktop\\MyAutomation\\Selenium\\Screenshots\\ScreenshotFailed.png"));
 		}
-		
 		catch (IOException e)	
 		{
 			e.printStackTrace();
@@ -41,13 +39,11 @@ public class baseClass {
 	
 	public void success() 
 	{
-		File Fsource = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		
 		try 
 		{
+			File Fsource = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 			FileUtils.copyFile(Fsource, new File("C:\\Users\\Katan\\OneDrive\\Desktop\\MyAutomation\\Selenium\\Screenshots\\ScreenshotSuccess.png"));
 		}
-		
 		catch (IOException e)
 		{
 			e.printStackTrace();
