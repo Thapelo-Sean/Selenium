@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 
 public class FirstTest {
-		public static WebDriver driver;
+		private WebDriver driver;
 
 		@BeforeTest
 		public void launchBrowser() 
@@ -22,10 +22,6 @@ public class FirstTest {
 	@Test
 	public void verifyHomePageTitle ()
 	{
-		WebDriverManager.chromedriver().setup();
-		WebDriver driver = new ChromeDriver();
-
-		driver.get("https://www.google.com");
 		driver.manage().window().maximize();
 		String expectedTitle = "Google";
 		String actualTitle = driver.getTitle();
