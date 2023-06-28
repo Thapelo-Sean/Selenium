@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.concurrent.TimeUnit;
 
-public class locators {
+public class Locators {
 
 	public static void main(String[] args) throws InterruptedException {
 		try
