@@ -11,7 +11,7 @@ import java.net.URL;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class findingBrokenImages {
+public class FindBrokenImages {
 
     public static WebDriver driver;
 

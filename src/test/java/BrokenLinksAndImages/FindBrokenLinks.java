@@ -14,7 +14,7 @@ import java.net.URL;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class findBrokenLinks {
+public class FindBrokenLinks {
     public static WebDriver driver;
     public static ExtentReports report;
     public static ExtentSparkReporter spark;
