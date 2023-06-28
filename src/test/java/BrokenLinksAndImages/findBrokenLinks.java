@@ -82,8 +82,8 @@ public class findBrokenLinks {
             HttpURLConnection httpURLConnection = (HttpURLConnection) verifyUrl.openConnection();
             httpURLConnection.setConnectTimeout(4000);
             httpURLConnection.connect();
-            report.createTest("Opening connection")
-                    .log(Status.PASS, "Opened connection for urls")
+            report.createTest("Verify connection")
+                    .log(Status.PASS, "Status ok")
                     .assignAuthor("Thapelo Matji");
 
             if(httpURLConnection.getResponseCode() < 400)
