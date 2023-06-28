@@ -8,7 +8,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class testNGannotations {
+public class TestNGAnnotations {
 	
 	/*BeforeSuite
 	 * BeforeTest
